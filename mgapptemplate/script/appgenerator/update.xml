@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- Sample build file used to retrieve svnant's sources -->
+<project name="Build" basedir=".">
+	<!-- svn -->
+	<target name="updateLocal">
+		<exec executable="svn">
+			<arg line="update ."/>
+		</exec>
+	</target>
+	
+</project>

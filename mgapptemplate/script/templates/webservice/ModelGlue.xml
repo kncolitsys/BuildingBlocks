@@ -1,0 +1,59 @@
+<modelglue>
+	<controllers>
+		<controller name="%objectname%" type="%newApplicationDirectoryDotPath%.controller.%objectname%">
+			<message-listener message="add%objectname%" function="add" />
+			<message-listener message="edit%objectname%" function="edit" />
+			<message-listener message="list%objectname%s" function="list" />
+			<message-listener message="save%objectname%" function="save" />
+			<message-listener message="delete%objectname%" function="delete" />
+		</controller>
+	</controllers>
+	<event-handlers>
+		<event-handler name="edit%objectname%">
+			<broadcasts>
+				<message name="edit%objectname%" />
+			</broadcasts>
+			<views>
+				<include name="body" template="%objectname%/frm%objectname%.cfm" />
+			</views>
+			<results>
+			</results>
+		</event-handler>
+		<event-handler name="list%objectname%s">
+			<broadcasts>
+				<message name="list%objectname%s" />
+			</broadcasts>
+			<views>
+				<include name="body" template="%objectname%/lst%objectname%.cfm" />
+			</views>
+		</event-handler>		
+		<event-handler name="add%objectname%">
+			<broadcasts>
+				<message name="add%objectname%" />
+			</broadcasts>
+			<views>
+				<include name="body" template="%objectname%/frm%objectname%.cfm" />
+			</views>
+			<results>
+			</results>
+		</event-handler>
+		<event-handler name="save%objectname%">
+			<broadcasts>
+				<message name="save%objectname%" />
+			</broadcasts>
+			<views></views>
+			<results>
+				<result name="list" do="list%objectname%s" />
+			</results>
+		</event-handler>		
+		<event-handler name="delete%objectname%">
+			<broadcasts>
+				<message name="delete%objectname%" />
+			</broadcasts>
+			<views></views>
+			<results>
+				<result name="list" do="list%objectname%s" />
+			</results>
+		</event-handler>	
+	</event-handlers>
+</modelglue>

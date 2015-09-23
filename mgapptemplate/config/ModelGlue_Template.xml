@@ -1,0 +1,11 @@
+<modelglue>
+	<event-handlers>
+		<event-handler name="view.template">
+			<broadcasts></broadcasts>
+			<results></results>
+			<views>
+				<include name="template" template="template/dspTemplate.cfm" />
+			</views>
+		</event-handler>
+	</event-handlers>
+</modelglue>

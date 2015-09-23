@@ -1,0 +1,19 @@
+<modelglue>
+	<include template="config/ModelGlue_Template.xml"/>
+	<controllers>
+	</controllers>
+	<event-handlers>
+		<event-handler name="helloworld">
+			<broadcasts />
+			<views>
+				<include name="body" template="dsphelloworld.cfm" />
+			</views>
+		</event-handler>
+		<event-handler name="exception">
+			<broadcasts />
+			<views>
+				<include name="body" template="dspException.cfm" />
+			</views>
+		</event-handler>
+	</event-handlers>
+</modelglue>

@@ -1,0 +1,8 @@
+<modelglue>
+	<controllers>
+		<controller name="%objectname%" type="%newApplicationDirectoryDotPath%.controller.%objectname%">
+		</controller>
+	</controllers>
+	<event-handlers>
+	</event-handlers>
+</modelglue>
